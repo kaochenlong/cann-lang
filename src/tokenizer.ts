@@ -23,16 +23,14 @@ class Tokenizer {
 
     // 如果是數字的話...
     if (isNumber(str[0])) {
-      let result = ""
+      const matched = /\d+/.exec(str)
+      if (matched !== null) {
+        this.cursor += matched[0].length
 
-      while (isNumber(str[this.cursor])) {
-        result += str[this.cursor]
-        this.cursor++
-      }
-
-      return {
-        type: "NUMBER",
-        value: +result,
+        return {
+          type: "NUMBER",
+          value: +matched[0],
+        }
       }
     }
 
