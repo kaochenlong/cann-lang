@@ -1,0 +1,15 @@
+{
+  "lint": {
+    "files": {
+      "include": ["src/"]
+    },
+    "rules": {
+      "exclude": ["no-explicit-any"]
+    }
+  },
+  "test": {
+    "files": {
+      "include": ["tests/"]
+    }
+  }
+}
