@@ -29,7 +29,7 @@ class Tokenizer {
 
         return {
           type: "NUMBER",
-          value: +matched[0],
+          value: matched[0],
         }
       }
     }

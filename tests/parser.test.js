@@ -8,7 +8,7 @@ describe("Parser", () => {
     const result = {
       type: "Program",
       body: {
-        type: "NUMBER",
+        type: "NumericLiteral",
         value: 1450,
       },
     }

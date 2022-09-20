@@ -7,7 +7,7 @@ describe("Tokenizer", () => {
     const input = `9527`
     const result = {
       type: "NUMBER",
-      value: 9527,
+      value: "9527",
     }
 
     const t = new Tokenizer(input)

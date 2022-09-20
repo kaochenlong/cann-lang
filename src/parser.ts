@@ -3,7 +3,7 @@ class Parser {
     return {
       type: "Program",
       body: {
-        type: "NUMBER",
+        type: "NumericLiteral",
         value: 1450,
       },
     }
