@@ -13,7 +13,6 @@ describe("Parser", () => {
       },
     }
 
-    const p = new Parser()
-    expect(p.parse(input)).toEqual(result)
+    expect(Parser(input)).toEqual(result)
   })
 })

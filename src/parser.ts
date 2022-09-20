@@ -1,13 +1,7 @@
-class Parser {
-  parse() {
-    return {
-      type: "Program",
-      body: {
-        type: "NumericLiteral",
-        value: 1450,
-      },
-    }
-  }
+import { parseNumericLiteral } from "./parser/literal.ts"
+
+function Parser(input: string): any {
+  return parseNumericLiteral(input)
 }
 
 export { Parser }

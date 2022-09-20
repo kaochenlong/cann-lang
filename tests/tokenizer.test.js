@@ -10,7 +10,6 @@ describe("Tokenizer", () => {
       value: "9527",
     }
 
-    const t = new Tokenizer(input)
-    expect(t.nextToken()).toEqual(result)
+    expect(Tokenizer(input).token).toEqual(result)
   })
 })
