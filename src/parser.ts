@@ -1,7 +1,7 @@
-import { parseNumericLiteral } from "./parser/literal.ts"
+import { parseLiteral } from "./parser/literal.ts"
 
 function Parser(input: string): any {
-  return parseNumericLiteral(input)
+  return parseLiteral(input)
 }
 
 export { Parser }
