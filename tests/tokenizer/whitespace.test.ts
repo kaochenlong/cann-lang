@@ -4,7 +4,7 @@ import { Tokenizer } from "../../src/tokenizer.ts"
 
 describe("Tokenizer", () => {
   describe("Whitespace and comment", () => {
-    it("處理多餘的空白 1", () => {
+    it("處理多餘的空白", () => {
       const input = `     'hello CANN'    `
       const result = {
         type: "STRING",
@@ -14,7 +14,7 @@ describe("Tokenizer", () => {
       expect(Tokenizer(input).token).toEqual(result)
     })
 
-    it("處理多餘的空白 2", () => {
+    it("處理多餘的空白，但保留該保留的空白", () => {
       const input = `     'hello      CANN'    `
       const result = {
         type: "STRING",
