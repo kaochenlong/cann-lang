@@ -11,7 +11,7 @@ describe("Parser", () => {
         body: null,
       }
 
-      expect(Parser(input)).toEqual(result)
+      expect(Parser({ input })).toEqual(result)
     })
 
     it("可以處理數字", () => {
@@ -24,7 +24,7 @@ describe("Parser", () => {
         },
       }
 
-      expect(Parser(input)).toEqual(result)
+      expect(Parser({ input })).toEqual(result)
     })
 
     it("可以處理數字", () => {
@@ -37,7 +37,7 @@ describe("Parser", () => {
         },
       }
 
-      expect(Parser(input)).toEqual(result)
+      expect(Parser({ input })).toEqual(result)
     })
   })
 })

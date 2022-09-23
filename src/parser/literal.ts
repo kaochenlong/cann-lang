@@ -1,6 +1,6 @@
 import { nextToken } from "../tokenizer/token.ts"
 
-function parseNumericLiteral(input: string) {
+function parseNumericLiteral({ input }: { input: string }) {
   const { token } = nextToken({ input })
 
   return {
@@ -12,7 +12,7 @@ function parseNumericLiteral(input: string) {
   }
 }
 
-function parseStringLiteral(input: string) {
+function parseStringLiteral({ input }: { input: string }) {
   const { token } = nextToken({ input })
 
   return {
@@ -24,14 +24,14 @@ function parseStringLiteral(input: string) {
   }
 }
 
-function parseLiteral(input: string) {
+function parseLiteral({ input }: { input: string }) {
   const { token } = nextToken({ input })
 
   switch (token?.type) {
     case "NUMBER":
-      return parseNumericLiteral(input)
+      return parseNumericLiteral({ input })
     case "STRING":
-      return parseStringLiteral(input)
+      return parseStringLiteral({ input })
     default:
       return { type: "Program", body: null }
   }

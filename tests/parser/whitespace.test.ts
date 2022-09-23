@@ -16,7 +16,7 @@ describe("Parser", () => {
         },
       }
 
-      expect(Parser(input)).toEqual(result)
+      expect(Parser({ input })).toEqual(result)
     })
 
     it("忽略不必要的空白字元，但保留應該保留的空白", () => {
@@ -29,7 +29,7 @@ describe("Parser", () => {
         },
       }
 
-      expect(Parser(input)).toEqual(result)
+      expect(Parser({ input })).toEqual(result)
     })
 
     it("忽略註解", () => {
@@ -46,7 +46,7 @@ describe("Parser", () => {
         },
       }
 
-      expect(Parser(input)).toEqual(result)
+      expect(Parser({ input })).toEqual(result)
     })
   })
 })
