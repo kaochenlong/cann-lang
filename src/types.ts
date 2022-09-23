@@ -3,4 +3,9 @@ type Token = {
   value: any
 }
 
-export type { Token }
+type AST = {
+  type: string
+  body: any[]
+}
+
+export type { Token, AST }
