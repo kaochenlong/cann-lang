@@ -10,10 +10,15 @@ describe("Parser", () => {
       `
       const result = {
         type: "Program",
-        body: {
-          type: "NumericLiteral",
-          value: 1450,
-        },
+        body: [
+          {
+            type: "ExpressionStatement",
+            expression: {
+              type: "NumericLiteral",
+              value: 1450,
+            },
+          },
+        ],
       }
 
       expect(Parser({ input })).toEqual(result)
@@ -23,10 +28,15 @@ describe("Parser", () => {
       const input = `   "hi    there"    `
       const result = {
         type: "Program",
-        body: {
-          type: "StringLiteral",
-          value: "hi    there",
-        },
+        body: [
+          {
+            type: "ExpressionStatement",
+            expression: {
+              type: "StringLiteral",
+              value: "hi    there",
+            },
+          },
+        ],
       }
 
       expect(Parser({ input })).toEqual(result)
@@ -40,10 +50,15 @@ describe("Parser", () => {
       `
       const result = {
         type: "Program",
-        body: {
-          type: "StringLiteral",
-          value: "hello world",
-        },
+        body: [
+          {
+            type: "ExpressionStatement",
+            expression: {
+              type: "StringLiteral",
+              value: "hello world",
+            },
+          },
+        ],
       }
 
       expect(Parser({ input })).toEqual(result)
